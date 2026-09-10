@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发胖-原因解析、易胖习惯与科学体重管理指南</title>
+<meta name="description" content="发胖是怎么回事？本页梳理常见发胖原因、容易导致体重上升的生活习惯、饮食与运动调整思路、体重监测方法及常见疑问，帮助你理性看待体重变化并找到可持续的管理方式。">
+<meta name="keywords" content="发胖,发胖原因,容易发胖,体重管理,减肥,基础代谢,饮食调整,运动习惯">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1d2b2a;
+  --ink-soft:#4a5f5c;
+  --line:#dbe6e3;
+  --bg:#f4f8f6;
+  --card:#ffffff;
+  --brand:#2f7d6b;
+  --brand-deep:#1f5a4c;
+  --brand-soft:#e4f2ec;
+  --warm:#e08a3c;
+  --warm-soft:#fdf1e3;
+  --radius:14px;
+  --shadow:0 6px 22px rgba(31,90,76,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+.wrap{width:min(1160px,92%);margin:0 auto;}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:var(--brand-deep);
+  color:#cfe7df;
+  font-size:13px;
+  letter-spacing:.3px;
+}
+.topbar .wrap{
+  display:flex;justify-content:space-between;align-items:center;
+  height:38px;gap:12px;flex-wrap:wrap;
+}
+.topbar span{opacity:.9;}
+.topbar .tb-links{display:flex;gap:18px;}
+.topbar .tb-links a:hover{color:#fff;}
+
+header.site-head{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:16px 0;
+}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo-mark{
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(135deg,var(--brand),#57a892);
+  color:#fff;font-weight:700;font-size:20px;
+  display:grid;place-items:center;flex:0 0 auto;
+  box-shadow:0 4px 12px rgba(47,125,107,.3);
+}
+.logo-text b{display:block;font-size:19px;letter-spacing:.5px;}
+.logo-text small{color:var(--ink-soft);font-size:12px;letter-spacing:1.5px;}
+
+nav.main-nav ul{display:flex;gap:6px;flex-wrap:wrap;}
+nav.main-nav a{
+  display:block;padding:8px 14px;border-radius:8px;
+  font-size:15px;color:var(--ink-soft);transition:.2s;
+}
+nav.main-nav a:hover,nav.main-nav a.active{
+  background:var(--brand-soft);color:var(--brand-deep);font-weight:600;
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:linear-gradient(160deg,#ffffff 0%,#eaf5f0 62%,#e0f0e9 100%);
+  border-bottom:1px solid var(--line);
+  padding:52px 0 46px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-80px;
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(47,125,107,.14),transparent 68%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center;
+  position:relative;z-index:2;
+}
+.hero-tag{
+  display:inline-block;background:var(--brand-soft);color:var(--brand-deep);
+  font-size:13px;padding:5px 14px;border-radius:999px;font-weight:600;
+  margin-bottom:16px;letter-spacing:.5px;
+}
+.hero h1{
+  font-size:clamp(26px,3.4vw,40px);line-height:1.35;
+  letter-spacing:.5px;margin-bottom:16px;
+}
+.hero h1 em{font-style:normal;color:var(--brand);}
+.hero p.lead{
+  font-size:16px;color:var(--ink-soft);max-width:640px;margin-bottom:24px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:11px 24px;border-radius:10px;
+  font-size:15px;font-weight:600;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(47,125,107,.28);}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--brand-deep);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--brand);background:var(--brand-soft);}
+
+.hero-side{
+  background:#fff;border-radius:var(--radius);padding:24px;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.hero-side h2{
+  font-size:16px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px dashed var(--line);color:var(--brand-deep);
+}
+.quick-list li{
+  display:flex;gap:10px;padding:9px 0;font-size:14.5px;color:var(--ink-soft);
+  border-bottom:1px solid #f1f6f4;
+}
+.quick-list li:last-child{border-bottom:none;}
+.quick-list .dot{
+  flex:0 0 auto;width:8px;height:8px;border-radius:50%;
+  background:var(--warm);margin-top:8px;
+}
+
+/* ---------- 通用区块 ---------- */
+section.block{padding:56px 0;}
+section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{margin-bottom:30px;}
+.sec-head .kicker{
+  font-size:13px;color:var(--brand);font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;display:block;margin-bottom:8px;
+}
+.sec-head h2{font-size:clamp(21px,2.4vw,28px);letter-spacing:.5px;}
+.sec-head p{color:var(--ink-soft);margin-top:8px;max-width:760px;font-size:15px;}
+
+/* ---------- 原因卡片 ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.25s;height:100%;
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#c6ded6;}
+.card .num{
+  font-size:13px;font-weight:700;color:var(--brand);
+  background:var(--brand-soft);display:inline-block;
+  padding:3px 10px;border-radius:6px;margin-bottom:12px;letter-spacing:1px;
+}
+.card h3{font-size:17px;margin-bottom:10px;}
+.card p{font-size:14.5px;color:var(--ink-soft);}
+
+/* ---------- 习惯清单 ---------- */
+.habit-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+.habit-list li{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--warm);
+  border-radius:10px;padding:14px 18px;margin-bottom:12px;
+}
+.habit-list strong{display:block;font-size:15.5px;margin-bottom:4px;}
+.habit-list span{font-size:14px;color:var(--ink-soft);}
+.note-box{
+  background:var(--warm-soft);border:1px solid #f3ddc2;border-radius:var(--radius);
+  padding:24px;
+}
+.note-box h3{font-size:17px;margin-bottom:12px;color:#a95f16;}
+.note-box p{font-size:14.5px;color:#6b4a24;margin-bottom:10px;}
+.note-box p:last-child{margin-bottom:0;}
+
+/* ---------- 步骤 ---------- */
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 20px;position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  font-size:26px;font-weight:800;color:#cfe4dc;display:block;margin-bottom:10px;
+  letter-spacing:1px;
+}
+.step h3{font-size:16px;margin-bottom:8px;}
+.step p{font-size:14px;color:var(--ink-soft);}
+
+/* ---------- 表格 ---------- */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff;}
+table{width:100%;border-collapse:collapse;min-width:620px;}
+th,td{padding:14px 18px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line);}
+th{background:var(--brand-soft);color:var(--brand-deep);font-weight:700;font-size:14px;letter-spacing:.5px;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f9fcfb;}
+
+/* ---------- 侧栏 + FAQ ---------- */
+.split{display:grid;grid-template-columns:1.6fr 1fr;gap:36px;align-items:start;}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;overflow:hidden;
+}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:16px 20px;font-size:15.5px;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+  font-family:inherit;
+}
+.faq-q .sign{
+  flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+  background:var(--brand-soft);color:var(--brand-deep);
+  display:grid;place-items:center;font-size:15px;line-height:1;transition:.25s;
+}
+.faq-item.open .faq-q .sign{background:var(--brand);color:#fff;transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;
+}
+.faq-a p{padding:0 20px 18px;font-size:14.5px;color:var(--ink-soft);}
+
+.aside-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;margin-bottom:20px;
+}
+.aside-card h3{
+  font-size:16px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--line);color:var(--brand-deep);
+}
+.aside-card ul li{
+  font-size:14px;color:var(--ink-soft);padding:7px 0;
+  border-bottom:1px dashed #eef4f2;
+}
+.aside-card ul li:last-child{border-bottom:none;}
+.aside-card ul li b{color:var(--ink);}
+
+/* ---------- 提醒条 ---------- */
+.notice{
+  background:var(--brand-deep);color:#d8ece5;border-radius:var(--radius);
+  padding:28px 30px;display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;
+}
+.notice h3{color:#fff;font-size:18px;margin-bottom:8px;}
+.notice p{font-size:14.5px;max-width:820px;}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+  background:#17332c;color:#9fbdb3;padding:46px 0 22px;font-size:14px;
+}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.foot-grid h4{color:#e6f2ee;font-size:15px;margin-bottom:14px;letter-spacing:.5px;}
+.foot-grid p{font-size:13.5px;line-height:1.9;color:#8fada3;}
+.foot-grid li{margin-bottom:9px;}
+.foot-grid a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid #26463d;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:13px;color:#7c9a90;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .split{grid-template-columns:1fr;}
+  .habit-wrap{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15px;}
+  .topbar .tb-links{display:none;}
+  .head-inner{flex-direction:column;align-items:flex-start;gap:12px;padding:14px 0;}
+  nav.main-nav ul{gap:4px;}
+  nav.main-nav a{padding:7px 11px;font-size:14px;}
+  .hero{padding:36px 0 34px;}
+  .grid-3,.grid-2,.steps{grid-template-columns:1fr;}
+  section.block{padding:40px 0;}
+  .foot-grid{grid-template-columns:1fr;}
+  .notice{padding:22px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>体重管理科普 · 理性看待身体变化</span>
+    <div class="tb-links">
+      <a href="#reasons">发胖原因</a>
+      <a href="#habits">易胖习惯</a>
+      <a href="#faq">常见疑问</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="logo">
+      <div class="logo-mark">衡</div>
+      <div class="logo-text">
+        <b>体重平衡站</b>
+        <small>FAT GAIN GUIDE</small>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#reasons" class="active">发胖原因</a></li>
+        <li><a href="#habits">易胖习惯</a></li>
+        <li><a href="#adjust">调整思路</a></li>
+        <li><a href="#monitor">监测方法</a></li>
+        <li><a href="#faq">常见疑问</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">科普 · 可持续的体重管理</span>
+        <h1>发胖不是突然发生的：<em>看懂原因</em>，才能找到适合自己的调整方式</h1>
+        <p class="lead">
+          体重上升通常是一个逐渐累积的过程，与长期的能量摄入、活动量、睡眠、压力以及个体差异都有关系。
+          与其纠结某一天的数字，不如先弄清楚“为什么会发胖”，再决定要不要调整、从哪里开始调整。
+        </p>
+        <div class="hero-actions">
+          <a href="#reasons" class="btn btn-primary">了解常见原因</a>
+          <a href="#adjust" class="btn btn-ghost">查看调整思路</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h2>先问自己这几个问题</h2>
+        <ul class="quick-list">
+          <li><span class="dot"></span>最近半年体重是缓慢上升，还是短期内明显变化？</li>
+          <li><span class="dot"></span>饮食结构、进食时间、外卖频率有没有变化？</li>
+          <li><span class="dot"></span>日常步行量与运动频率是否减少？</li>
+          <li><span class="dot"></span>睡眠时长、作息规律、精神压力处于什么状态？</li>
+          <li><span class="dot"></span>是否正在服用可能影响体重的药物？</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 发胖原因 -->
+  <section class="block" id="reasons">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Reasons</span>
+        <h2>常见的发胖原因有哪些</h2>
+        <p>体重变化很少由单一因素造成，多数情况下是多个因素长期叠加的结果。以下方向适合作为自我排查的起点，而不是用来给自己下结论。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>能量摄入长期偏多</h3>
+          <p>高油高糖饮食、含糖饮料、频繁加餐和外卖，容易让每日摄入超出身体实际需要。单次多吃并不会立刻发胖，但长期累积会带来体重上升。</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>日常活动量下降</h3>
+          <p>通勤方式改变、久坐办公、家务减少，都会降低一天的总消耗。即使饮食没变，消耗减少也可能让体重慢慢走高。</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>睡眠不足与作息紊乱</h3>
+          <p>长期熬夜、睡眠时间短，可能影响食欲调节和第二天进食选择，让人更倾向选择高热量食物，间接推动体重变化。</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>长期精神压力</h3>
+          <p>压力状态下，部分人会通过进食缓解情绪，形成“情绪性进食”。这类进食往往发生在不饿的时候，容易被忽略。</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>年龄与身体成分变化</h3>
+          <p>随着年龄增长，肌肉量可能自然减少，基础消耗随之下降。若饮食和活动量维持原样，体重就更容易上升。</p>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <h3>药物或健康状况影响</h3>
+          <p>某些药物及部分内分泌、代谢相关状况可能影响体重。若体重短期内明显变化，建议咨询专业医生，而不是自行判断。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 易胖习惯 -->
+  <section class="block alt" id="habits">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Habits</span>
+        <h2>容易被忽视的“易胖”生活习惯</h2>
+        <p>下面这些习惯单独看都不算严重，但它们常常同时存在，并且持续很长时间。识别出自己中了几条，比立刻全部改掉更有意义。</p>
+      </div>
+      <div class="habit-wrap">
+        <ul class="habit-list">
+          <li><strong>把饮料当水喝</strong><span>含糖饮料、奶茶、果汁的热量容易被忽略，却很难带来饱腹感。</span></li>
+          <li><strong>吃饭速度过快</strong><span>进食太快时，饱腹信号来不及传递，容易在不知不觉中吃多。</span></li>
+          <li><strong>晚餐时间偏晚且分量大</strong><span>睡前进食较多，加上活动量低，能量更容易剩余。</span></li>
+          <li><strong>用零食填补情绪</strong><span>压力大、无聊或疲惫时进食，往往与真正的饥饿无关。</span></li>
+          <li><strong>久坐不动且很少中断</strong><span>连续几小时不活动，会明显拉低一天的总消耗。</span></li>
+        </ul>
+        <div class="note-box">
+          <h3>关于“易胖体质”的理性理解</h3>
+          <p>个体在代谢、食欲、激素反应等方面确实存在差异，这会让不同人对相同饮食和活动的反应不同。</p>
+          <p>但“易胖体质”通常不是体重变化的唯一解释。与其把它当作无法改变的结论，不如把它看作一个提示：你需要比他人更关注饮食结构、活动量和作息规律。</p>
+          <p>如果体重在短时间内出现明显且无法解释的变化，建议寻求专业医疗建议，排除潜在的健康因素。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 调整思路 -->
+  <section class="block" id="adjust">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Approach</span>
+        <h2>想调整体重，可以从这四步开始</h2>
+        <p>体重管理更适合被理解为长期的生活方式调整，而不是短期冲刺。以下顺序强调“先观察、再行动”，避免一上来就大幅改变。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>记录现状</h3>
+          <p>连续一两周记录体重、饮食大致内容和活动量，先看清自己的真实状态，而不是凭印象判断。</p>
+        </article>
+        <article class="step">
+          <h3>找出关键项</h3>
+          <p>从记录中挑出一到两个最明显的问题，例如含糖饮料或夜宵，优先处理影响最大的部分。</p>
+        </article>
+        <article class="step">
+          <h3>小步调整</h3>
+          <p>用替换而非剥夺的方式改变，例如用白水替代部分饮料，用步行替代部分久坐时间，更容易坚持。</p>
+        </article>
+        <article class="step">
+          <h3>观察与复盘</h3>
+          <p>以数周为单位观察趋势，允许波动存在。若长期没有变化，再考虑调整方向或寻求专业意见。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 监测方法 -->
+  <section class="block alt" id="monitor">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Monitoring</span>
+        <h2>如何科学地观察体重变化</h2>
+        <p>体重每天都会波动，单次数字并不能说明问题。选择合适的方式观察趋势，能减少不必要的焦虑。</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>观察方式</th>
+              <th>适合关注什么</th>
+              <th>注意事项</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>固定时间称重</td>
+              <td>体重的中长期趋势</td>
+              <td>建议在相近条件下测量，例如早晨空腹，每周记录数次即可</td>
+            </tr>
+            <tr>
+              <td>腰围等围度测量</td>
+              <td>身体形态与脂肪分布变化</td>
+              <td>测量位置保持一致，避免用力收腹</td>
+            </tr>
+            <tr>
+              <td>衣物合身程度</td>
+              <td>日常体感的直观变化</td>
+              <td>作为辅助参考，不作为唯一依据</td>
+            </tr>
+            <tr>
+              <td>饮食与活动记录</td>
+              <td>行为习惯的变化</td>
+              <td>重在持续记录，不必追求精确到每一克</td>
+            </tr>
+            <tr>
+              <td>精力与睡眠感受</td>
+              <td>整体状态是否改善</td>
+              <td>体重之外的健康指标同样值得关注</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + 侧栏 -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>关于发胖的常见疑问</h2>
+      </div>
+      <div class="split">
+        <div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">吃得多就一定会发胖吗？<span class="sign">+</span></button>
+            <div class="faq-a"><p>不一定。体重变化取决于摄入与消耗的长期平衡，也受个体差异影响。偶尔一次吃多不会直接导致发胖，长期摄入持续高于消耗才更容易带来体重上升。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">为什么明明吃得不多，体重还是在涨？<span class="sign">+</span></button>
+            <div class="faq-a"><p>“吃得不多”是主观感受，实际摄入可能被饮料、零食、调味酱料等忽略。此外，活动量下降、睡眠不足、年龄增长带来的消耗变化，以及部分药物或健康状况，都可能参与其中。建议先做一段时间的客观记录。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">不吃主食能避免发胖吗？<span class="sign">+</span></button>
+            <div class="faq-a"><p>主食是重要的能量来源，完全不吃并不适合所有人，也难以长期坚持。更可行的做法是调整主食的种类和分量，例如适当增加全谷物和杂豆比例，并控制整体摄入量。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">运动多久才能看到体重变化？<span class="sign">+</span></button>
+            <div class="faq-a"><p>体重变化的快慢因人而异，也取决于饮食、运动方式和睡眠等多方面因素。相比短期数字，更建议关注数周甚至更长时间的趋势，以及体能、精力和围度等变化。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">什么时候应该去看医生？<span class="sign">+</span></button>
+            <div class="faq-a"><p>如果体重在短期内出现明显且无法解释的变化，或伴随乏力、怕冷、月经紊乱、异常口渴等表现，建议及时就医，由专业人员评估是否存在需要处理的健康问题。</p></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="aside-card">
+            <h3>日常可参考的小方向</h3>
+            <ul>
+              <li><b>饮水：</b>用白水替代部分含糖饮料，是最容易执行的改变之一。</li>
+              <li><b>进食：</b>放慢速度，给饱腹感留出反应时间。</li>
+              <li><b>活动：</b>每坐一小时起身活动几分钟，累积起来并不少。</li>
+              <li><b>睡眠：</b>尽量保持相对固定的入睡和起床时间。</li>
+              <li><b>心态：</b>接受体重存在波动，关注趋势而非单日数字。</li>
+            </ul>
+          </div>
+          <div class="aside-card">
+            <h3>需要避免的做法</h3>
+            <ul>
+              <li>极端节食或长期跳过正餐</li>
+              <li>依赖来源不明的减肥产品</li>
+              <li>用体重数字否定自己的全部努力</li>
+              <li>在没有专业指导的情况下长期执行单一饮食方案</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提醒 -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="notice">
+        <div>
+          <h3>理性提示</h3>
+          <p>本页内容为一般性健康科普，不能替代医生、营养师等专业人员的面诊与个体化建议。每个人的身体状况不同，涉及用药、疾病或明显体重异常时，请以专业医疗意见为准。体重只是健康的一个参考维度，不必让它成为评价自己的唯一标准。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>体重平衡站</h4>
+        <p>围绕“发胖”这一常见困扰，整理原因分析、习惯识别、调整思路与监测方法，帮助读者用更理性的方式看待体重变化。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#reasons">发胖原因</a></li>
+          <li><a href="#habits">易胖习惯</a></li>
+          <li><a href="#adjust">调整思路</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>实用参考</h4>
+        <ul>
+          <li><a href="#monitor">监测方法</a></li>
+          <li><a href="#faq">常见疑问</a></li>
+          <li><a href="#adjust">小步调整</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul>
+          <li>内容仅供科普参考</li>
+          <li>不构成医疗建议</li>
+          <li>身体异常请及时就医</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 体重平衡站 · 关注科学、可持续的体重管理</span>
+      <span>请结合自身情况理性参考本页内容</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var panel = item.querySelector('.faq-a');
+    if(!btn || !panel) return;
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){
+        other.classList.remove('open');
+        var p = other.querySelector('.faq-a');
+        if(p) p.style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  var links = document.querySelectorAll('nav.main-nav a');
+  links.forEach(function(link){
+    link.addEventListener('click', function(){
+      links.forEach(function(l){ l.classList.remove('active'); });
+      link.classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
