@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人际沟通理论-核心模型、应用场景与学习指南</title>
+<meta name="description" content="系统梳理人际沟通理论的核心模型，包括符号互动论、社会渗透理论、关系辩证理论、不确定性减少理论等，讲清概念、适用场景、学习方法与常见误区，帮助学习者把理论用于日常沟通与职场协作。">
+<meta name="keywords" content="人际沟通理论,沟通模型,符号互动论,社会渗透理论,关系辩证理论,不确定性减少理论,沟通技巧,人际交往">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1d2430;
+    --ink-soft:#4a5568;
+    --line:#e2e6ee;
+    --bg:#f5f7fb;
+    --paper:#ffffff;
+    --brand:#2f5fd0;
+    --brand-deep:#1f3f92;
+    --accent:#e8a33d;
+    --accent-soft:#fdf3e0;
+    --teal:#1f8a80;
+    --radius:14px;
+    --shadow:0 6px 22px rgba(29,36,48,.07);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--brand);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{line-height:1.35;margin:0 0 .6em;font-weight:700;}
+  p{margin:0 0 1em;}
+  ul,ol{margin:0 0 1em;padding-left:1.25em;}
+  li{margin-bottom:.45em;}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶部 ---------- */
+  .site-header{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:14px 0;flex-wrap:wrap;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.12rem;color:var(--ink);}
+  .logo:hover{text-decoration:none;}
+  .logo-mark{
+    width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--brand),var(--teal));
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:.95rem;letter-spacing:-1px;
+  }
+  .logo small{display:block;font-size:.72rem;font-weight:400;color:var(--ink-soft);letter-spacing:.5px;}
+  .main-nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  .main-nav a{
+    display:block;padding:7px 13px;border-radius:9px;
+    color:var(--ink-soft);font-size:.94rem;
+  }
+  .main-nav a:hover,.main-nav a.active{background:#eef2fc;color:var(--brand-deep);text-decoration:none;}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:linear-gradient(160deg,#eef2fc 0%,#f7f9fd 55%,#fdf6ea 100%);
+    border-bottom:1px solid var(--line);
+    padding:52px 0 46px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:44px;align-items:start;}
+  .hero h1{font-size:2.1rem;letter-spacing:-.5px;margin-bottom:.5em;}
+  .hero .lead{font-size:1.05rem;color:var(--ink-soft);max-width:44em;}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 26px;padding:0;list-style:none;}
+  .hero-tags li{
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:5px 14px;font-size:.86rem;color:var(--ink-soft);margin:0;
+  }
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:11px;
+    font-size:.95rem;font-weight:600;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--brand);color:#fff;}
+  .btn-primary:hover{background:var(--brand-deep);text-decoration:none;}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep);text-decoration:none;}
+
+  .hero-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:22px 24px;
+  }
+  .hero-card h2{font-size:1rem;margin-bottom:.9em;color:var(--ink);}
+  .hero-card ol{margin:0;padding-left:1.15em;font-size:.93rem;color:var(--ink-soft);}
+  .hero-card li{margin-bottom:.55em;}
+
+  /* ---------- 通用区块 ---------- */
+  .section{padding:50px 0;}
+  .section.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .section-head{max-width:62em;margin-bottom:30px;}
+  .section-head h2{font-size:1.5rem;}
+  .section-head p{color:var(--ink-soft);margin-bottom:0;}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;letter-spacing:1.5px;
+    color:var(--brand);font-weight:700;margin-bottom:8px;text-transform:uppercase;
+  }
+
+  /* ---------- 理论卡片 ---------- */
+  .theory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .theory-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  }
+  .theory-card .num{
+    font-size:.78rem;font-weight:700;color:var(--brand);
+    letter-spacing:1px;margin-bottom:6px;
+  }
+  .theory-card h3{font-size:1.08rem;margin-bottom:.5em;}
+  .theory-card p{font-size:.92rem;color:var(--ink-soft);margin-bottom:.9em;}
+  .theory-card ul{font-size:.88rem;color:var(--ink-soft);padding-left:1.1em;margin-bottom:0;}
+  .theory-card ul li::marker{color:var(--accent);}
+
+  /* ---------- 时间线 / 发展脉络 ---------- */
+  .timeline{position:relative;margin:0;padding:0 0 0 26px;list-style:none;}
+  .timeline::before{
+    content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,var(--brand),var(--accent));
+    opacity:.35;
+  }
+  .timeline li{position:relative;margin-bottom:22px;}
+  .timeline li::before{
+    content:"";position:absolute;left:-26px;top:8px;width:11px;height:11px;
+    border-radius:50%;background:#fff;border:2px solid var(--brand);
+  }
+  .timeline strong{display:block;font-size:.98rem;}
+  .timeline span{font-size:.9rem;color:var(--ink-soft);}
+
+  /* ---------- 双栏内容 ---------- */
+  .two-col{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:start;}
+  .panel{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;box-shadow:var(--shadow);
+  }
+  .panel h3{font-size:1.12rem;}
+  .panel p,.panel li{font-size:.94rem;color:var(--ink-soft);}
+  .panel-note{
+    background:var(--accent-soft);border:1px solid #f0dcb8;border-radius:var(--radius);
+    padding:20px 22px;
+  }
+  .panel-note h3{font-size:1rem;color:#8a5a12;}
+  .panel-note p,.panel-note li{font-size:.9rem;color:#7a5316;}
+
+  /* ---------- 应用场景表 ---------- */
+  .scenario-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .scenario{
+    background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--teal);
+    border-radius:10px;padding:18px 20px;
+  }
+  .scenario h3{font-size:1rem;margin-bottom:.45em;}
+  .scenario p{font-size:.9rem;color:var(--ink-soft);margin-bottom:0;}
+
+  /* ---------- 学习路径 ---------- */
+  .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none;padding:0;margin:0;}
+  .steps li{
+    counter-increment:step;background:var(--paper);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px;position:relative;margin:0;
+  }
+  .steps li::before{
+    content:counter(step,decimal-leading-zero);
+    display:block;font-size:1.4rem;font-weight:700;color:#c9d5ef;margin-bottom:8px;
+  }
+  .steps h3{font-size:1rem;}
+  .steps p{font-size:.9rem;color:var(--ink-soft);margin-bottom:0;}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:64em;}
+  .faq details{
+    background:var(--paper);border:1px solid var(--line);border-radius:11px;
+    padding:15px 20px;margin-bottom:12px;
+  }
+  .faq summary{
+    cursor:pointer;font-weight:600;font-size:.99rem;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;align-items:flex-start;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"+";color:var(--brand);font-weight:700;font-size:1.15rem;line-height:1.2;
+    flex:0 0 auto;
+  }
+  .faq details[open] summary::after{content:"–";}
+  .faq details p{margin:12px 0 0;font-size:.93rem;color:var(--ink-soft);}
+
+  /* ---------- 相关概念 ---------- */
+  .term-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .term{
+    background:var(--paper);border:1px solid var(--line);border-radius:11px;
+    padding:16px 18px;
+  }
+  .term h3{font-size:.98rem;margin-bottom:.35em;color:var(--brand-deep);}
+  .term p{font-size:.88rem;color:var(--ink-soft);margin-bottom:0;}
+
+  /* ---------- 页脚 ---------- */
+  .site-footer{
+    background:#161c26;color:#b9c2d0;padding:44px 0 26px;margin-top:10px;
+  }
+  .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;}
+  .site-footer h3{font-size:.95rem;color:#fff;margin-bottom:.8em;}
+  .site-footer p,.site-footer li{font-size:.88rem;color:#98a3b4;}
+  .site-footer ul{list-style:none;padding:0;margin:0;}
+  .site-footer a{color:#c3cbd8;}
+  .site-footer a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid #2a3341;margin-top:30px;padding-top:18px;
+    font-size:.82rem;color:#7d8798;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:980px){
+    .hero-grid,.two-col{grid-template-columns:1fr;gap:28px;}
+    .theory-grid,.term-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    body{font-size:15.5px;}
+    .hero{padding:36px 0 32px;}
+    .hero h1{font-size:1.6rem;}
+    .section{padding:36px 0;}
+    .theory-grid,.term-grid,.scenario-list,.steps{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .header-inner{padding:12px 0;}
+    .main-nav ul{gap:2px;}
+    .main-nav a{padding:6px 9px;font-size:.88rem;}
+    .panel{padding:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">沟通</span>
+      <span>人际沟通理论<small>模型 · 应用 · 学习路径</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#core">核心理论</a></li>
+        <li><a href="#develop">发展脉络</a></li>
+        <li><a href="#apply">应用场景</a></li>
+        <li><a href="#learn">学习方法</a></li>
+        <li><a href="#terms">相关概念</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>人际沟通理论：理解人与人之间信息与意义如何流动</h1>
+        <p class="lead">
+          人际沟通理论研究的是两个人或小群体之间，信息如何被编码、传递、解读，以及关系如何在一次次互动中被建立、维持和改变。
+          它不只是一套“说话技巧”，而是帮助你解释“为什么同一句话会产生完全不同的反应”“为什么关系会从亲密走向疏远”的分析框架。
+          本页按理论流派、发展脉络、应用场景和学习方法四个层次展开，方便初学者建立整体认识，也方便有基础的读者按需查阅。
+        </p>
+        <ul class="hero-tags">
+          <li>符号互动论</li>
+          <li>社会渗透理论</li>
+          <li>关系辩证理论</li>
+          <li>不确定性减少理论</li>
+          <li>人际需求理论</li>
+          <li>沟通能力模型</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#core">查看核心理论</a>
+          <a class="btn btn-ghost" href="#learn">了解学习方法</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>初学者建议的阅读顺序</h2>
+        <ol>
+          <li>先弄清“沟通”与“人际沟通”的界定差别，避免把大众传播、组织传播混在一起。</li>
+          <li>掌握两到三个经典理论，例如符号互动论与社会渗透理论，作为分析起点。</li>
+          <li>理解理论背后的假设：人是主动解释意义的，关系是动态变化的。</li>
+          <li>把理论放回具体场景，如职场反馈、亲密关系冲突、跨文化协作。</li>
+          <li>用真实对话做复盘，检验理论解释力，而不是死记术语。</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 核心理论 -->
+  <section class="section" id="core">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Core Theories</span>
+        <h2>人际沟通理论的核心流派与代表模型</h2>
+        <p>
+          人际沟通理论并非单一学说，而是由社会学、心理学、语言学等多个学科共同贡献的一组解释框架。
+          下面这些模型在教材与研究中出现频率较高，也较容易迁移到日常沟通实践中。
+        </p>
+      </div>
+
+      <div class="theory-grid">
+        <article class="theory-card">
+          <div class="num">01</div>
+          <h3>符号互动论</h3>
+          <p>强调人通过符号（语言、表情、动作、物件）赋予事物意义，并在互动中不断调整这些意义。</p>
+          <ul>
+            <li>关注点：意义如何被协商</li>
+            <li>启示：同一句话在不同关系中含义不同</li>
+            <li>常见应用：误解溯源、身份认同沟通</li>
+          </ul>
+        </article>
+
+        <article class="theory-card">
+          <div class="num">02</div>
+          <h3>社会渗透理论</h3>
+          <p>把关系发展看作由浅入深、由外向内逐步自我暴露的过程，涉及广度与深度两个维度。</p>
+          <ul>
+            <li>关注点：自我暴露的节奏与层次</li>
+            <li>启示：关系推进过快或过慢都可能出问题</li>
+            <li>常见应用：建立信任、团队破冰</li>
+          </ul>
+        </article>
+
+        <article class="theory-card">
+          <div class="num">03</div>
+          <h3>不确定性减少理论</h3>
+          <p>认为人在与陌生人或新环境互动时，会主动收集信息以降低不确定性，从而预测对方行为。</p>
+          <ul>
+            <li>关注点：信息搜集与预测动机</li>
+            <li>启示：初次沟通中的提问与试探是正常需求</li>
+            <li>常见应用：面试、跨部门协作、异地适应</li>
+          </ul>
+        </article>
+
+        <article class="theory-card">
+          <div class="num">04</div>
+          <h3>关系辩证理论</h3>
+          <p>指出人际关系中同时存在相互矛盾的张力，例如既想亲密又想独立，既想稳定又想变化。</p>
+          <ul>
+            <li>关注点：矛盾张力的管理方式</li>
+            <li>启示：冲突未必是关系失败，而是常态</li>
+            <li>常见应用：亲密关系、长期合作沟通</li>
+          </ul>
+        </article>
+
+        <article class="theory-card">
+          <div class="num">05</div>
+          <h3>人际需求理论</h3>
+          <p>提出人具有包容、控制与情感三类基本人际需求，不同个体的需求强度组合各不相同。</p>
+          <ul>
+            <li>关注点：需求差异导致的互动偏好</li>
+            <li>启示：沟通风格差异常源于需求结构不同</li>
+            <li>常见应用：团队搭配、领导风格分析</li>
+          </ul>
+        </article>
+
+        <article class="theory-card">
+          <div class="num">06</div>
+          <h3>沟通能力模型</h3>
+          <p>把有效沟通拆解为知识、技能、动机与情境适应几个部分，强调能力是可训练的。</p>
+          <ul>
+            <li>关注点：能力构成与可提升性</li>
+            <li>启示：沟通表现受情境影响，不能一概而论</li>
+            <li>常见应用：沟通培训、反馈与复盘</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 发展脉络 -->
+  <section class="section alt" id="develop">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Background</span>
+        <h2>理论是怎么一步步发展起来的</h2>
+        <p>了解学科脉络，有助于理解为什么同一现象会有多种解释，也能避免把某个模型当成唯一答案。</p>
+      </div>
+      <div class="two-col">
+        <ol class="timeline">
+          <li>
+            <strong>早期关注“互动中的意义”</strong>
+            <span>社会学取向的研究者开始把日常互动当作可分析的对象，提出人通过符号理解彼此，意义在互动中形成而非固定不变。</span>
+          </li>
+          <li>
+            <strong>心理学取向引入“需求与动机”</strong>
+            <span>研究者尝试解释人为什么需要沟通，把归属、控制、情感等需求与沟通行为联系起来，形成人际需求相关框架。</span>
+          </li>
+          <li>
+            <strong>关系发展过程被系统描述</strong>
+            <span>自我暴露、关系阶段、亲密与疏远的循环成为研究重点，关系被视为动态过程而非静态状态。</span>
+          </li>
+          <li>
+            <strong>矛盾与张力进入研究视野</strong>
+            <span>研究者发现关系中的冲突与拉扯是结构性存在，由此发展出关系辩证等解释路径。</span>
+          </li>
+          <li>
+            <strong>走向跨情境与跨文化</strong>
+            <span>随着组织沟通、跨文化沟通、数字媒介沟通的兴起，理论不断被修正，以适应新的互动环境。</span>
+          </li>
+        </ol>
+
+        <div class="panel">
+          <h3>理解脉络时的两个提醒</h3>
+          <p>
+            第一，这些理论之间并非互相取代的关系，而是从不同角度切入同一现象。符号互动论更关心意义，
+            社会渗透理论更关心关系深度，关系辩证理论更关心矛盾张力，它们可以叠加使用。
+          </p>
+          <p>
+            第二，理论多形成于特定时代与特定文化背景，迁移到当下的线上沟通、跨文化协作时，
+            需要结合具体情境判断，而不是直接套用结论。
+          </p>
+          <div class="panel-note" style="margin-top:16px;">
+            <h3>学习提示</h3>
+            <p style="margin-bottom:0;">
+              与其背诵“某理论由谁在哪一年提出”，不如先记住它试图回答的问题：
+              意义是怎么产生的？关系是怎么变深的？矛盾为什么无法消除？带着问题读理论，效率会高很多。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 应用场景 -->
+  <section class="section" id="apply">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Application</span>
+        <h2>把理论放回真实场景</h2>
+        <p>理论的价值在于提供观察角度。以下场景说明可以怎样用不同模型解释同一段沟通。</p>
+      </div>
+      <div class="scenario-list">
+        <article class="scenario">
+          <h3>职场反馈与上下级沟通</h3>
+          <p>当反馈被理解为“否定”而非“建议”，往往是因为双方对同一符号的意义解读不同。
+          可借助符号互动论分析措辞与关系背景，再结合沟通能力模型调整表达方式与时机。</p>
+        </article>
+        <article class="scenario">
+          <h3>新团队破冰与协作</h3>
+          <p>新成员初期频繁提问、试探边界，属于降低不确定性的自然行为。
+          管理者可主动提供信息、明确规则，减少成员靠猜测填补空白带来的摩擦。</p>
+        </article>
+        <article class="scenario">
+          <h3>亲密关系中的距离感</h3>
+          <p>一方希望更多陪伴，另一方需要独处空间，这类张力可用关系辩证理论解释。
+          重点不是判定谁对谁错，而是协商出可调整的相处节奏。</p>
+        </article>
+        <article class="scenario">
+          <h3>跨文化或跨部门协作</h3>
+          <p>表达直接与含蓄、决策快与慢，往往源于不同的沟通预期。
+          先澄清彼此默认规则，再讨论具体分歧，通常比直接争论结论更有效。</p>
+        </article>
+        <article class="scenario">
+          <h3>线上文字沟通的误解</h3>
+          <p>文字缺少语气与表情，意义更容易被接收方自行补全。
+          在重要事项上补充确认、复述要点，可以降低符号解读偏差。</p>
+        </article>
+        <article class="scenario">
+          <h3>公开表达与演讲</h3>
+          <p>沟通能力模型提示，表达效果取决于知识、技能、动机与情境的配合。
+          仅靠背稿难以应对现场变化，需要提前预判听众需求与可能的提问。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学习方法 -->
+  <section class="section alt" id="learn">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How to Learn</span>
+        <h2>系统学习人际沟通理论的四个阶段</h2>
+        <p>以下路径适合自学者，也适合作为课程复习的整理框架。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>建立概念地图</h3>
+          <p>先区分人际沟通、大众传播、组织传播的边界，明确研究对象是两人或小群体之间的互动。</p>
+        </li>
+        <li>
+          <h3>精读两到三个模型</h3>
+          <p>选择与你实际需求最接近的理论深入理解，弄清它的前提假设、核心概念与解释范围。</p>
+        </li>
+        <li>
+          <h3>做场景对照练习</h3>
+          <p>拿一段真实对话，用不同理论分别解释，比较哪种解释更贴近事实，训练分析能力。</p>
+        </li>
+        <li>
+          <h3>形成个人框架</h3>
+          <p>把有效的解释角度整合成自己的观察清单，在沟通前中后分别使用，逐步内化为习惯。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 相关概念 -->
+  <section class="section" id="terms">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Key Terms</span>
+        <h2>阅读理论时常见的相关概念</h2>
+        <p>这些术语在教材中频繁出现，理解它们有助于减少阅读障碍。</p>
+      </div>
+      <div class="term-grid">
+        <div class="term">
+          <h3>编码与解码</h3>
+          <p>发送方把想法转成语言或动作，接收方再将其还原为意义，偏差常发生在这两个环节之间。</p>
+        </div>
+        <div class="term">
+          <h3>反馈回路</h3>
+          <p>沟通不是单向传递，接收方的回应会反过来影响发送方的下一步表达。</p>
+        </div>
+        <div class="term">
+          <h3>自我暴露</h3>
+          <p>主动分享关于自己的信息，是关系加深的重要途径，但需要与关系阶段相匹配。</p>
+        </div>
+        <div class="term">
+          <h3>沟通噪音</h3>
+          <p>干扰信息准确传递的因素，包括环境噪音、情绪状态、用词歧义与先入为主的判断。</p>
+        </div>
+        <div class="term">
+          <h3>元沟通</h3>
+          <p>关于沟通本身的沟通，例如讨论“我们刚才的说话方式”，常用于修复互动中的问题。</p>
+        </div>
+        <div class="term">
+          <h3>共情式倾听</h3>
+          <p>不仅听内容，也尝试理解对方的感受与立场，是许多沟通训练中的基础技能。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>关于人际沟通理论的常见问题</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>人际沟通理论和日常说的“沟通技巧”是一回事吗？</summary>
+          <p>不完全相同。沟通技巧偏向具体做法，例如如何提问、如何复述；人际沟通理论更关注解释层面，
+          回答“为什么会这样”“在什么条件下有效”。两者互补，先理解机制再练习技巧，通常更容易迁移到新情境。</p>
+        </details>
+        <details>
+          <summary>这些理论有科学依据吗？</summary>
+          <p>人际沟通理论多来自社会科学研究，通常基于观察、访谈、实验或长期跟踪，并经过学术共同体的讨论与修正。
+          但社会现象本身复杂，理论提供的是概率性解释与观察角度，而不是可以无条件套用的公式。</p>
+        </details>
+        <details>
+          <summary>学习这些理论对普通人有什么实际帮助？</summary>
+          <p>最直接的帮助是减少归因偏差。当沟通出现问题时，你会先考虑意义解读、关系阶段、情境差异等因素，
+          而不是简单归结为“对方性格有问题”或“我不擅长说话”，这往往能让问题更容易被处理。</p>
+        </details>
+        <details>
+          <summary>需要按顺序学完所有理论吗？</summary>
+          <p>不必。建议从与你当前需求最相关的模型入手，例如经常处理冲突可以先看关系辩证理论，
+          需要建立信任可以先看社会渗透理论。学完一个就做场景对照，比通读一遍更有收获。</p>
+        </details>
+        <details>
+          <summary>线上沟通和面对面沟通，理论还适用吗？</summary>
+          <p>核心假设仍然适用，例如意义协商、不确定性降低、关系张力。但线上环境缺少非语言线索、节奏更快、
+          记录可留存，这些变化会影响理论的具体表现方式，需要结合媒介特点做调整。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>关于本站</h3>
+        <p>
+          本站围绕人际沟通理论整理概念、模型与应用思路，内容以学习参考为目的，
+          力求表述严谨、来源可追溯，不替代专业心理咨询、法律或医疗建议。
+        </p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#core">核心理论</a></li>
+          <li><a href="#develop">发展脉络</a></li>
+          <li><a href="#apply">应用场景</a></li>
+          <li><a href="#learn">学习方法</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>延伸阅读方向</h3>
+        <ul>
+          <li><a href="#terms">关键术语</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#apply">职场沟通场景</a></li>
+          <li><a href="#apply">跨文化沟通</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>人际沟通理论 · 学习参考资料</span>
+      <span>内容仅供学习与交流使用</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动时对固定页眉做偏移补偿
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var header = document.querySelector('.site-header');
+      var offset = header ? header.offsetHeight + 10 : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // 导航高亮：根据当前滚动位置标记对应栏目
+  (function () {
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.main-nav a'));
+    var sections = navLinks
+      .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean);
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function (s) { observer.observe(s); });
+  })();
+</script>
+
+</body>
+  </html>
