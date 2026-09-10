@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pear的音标 - 英式美式发音、读音规则与常见疑问解答</title>
+<meta name="description" content="pear的音标详解：英式 /peə(r)/ 与美式 /per/ 的写法、发音要点、与 pair、pare 的同音关系，以及 pear 复数、短语和常见拼读疑问。">
+<meta name="keywords" content="pear的音标,pear发音,pear怎么读,pear英式音标,pear美式音标,pear音标写法">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --green:#3f7d4e;
+  --green-dark:#2c5b38;
+  --green-soft:#eaf4ec;
+  --amber:#c98a2e;
+  --ink:#1e2a22;
+  --ink-soft:#4a5a4f;
+  --line:#d8e4da;
+  --bg:#f7faf7;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 6px 20px rgba(35,70,45,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--green-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;}
+
+/* 顶部提示条 */
+.topbar{
+  background:var(--green-dark);
+  color:#dff0e3;
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.topbar .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:8px 20px;
+  flex-wrap:wrap;
+}
+.topbar span.tagline{opacity:.85;}
+
+/* 页眉 */
+header.site-head{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.head-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:14px 20px;
+  max-width:1140px;
+  margin:0 auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand .logo{
+  width:44px;height:44px;
+  border-radius:50%;
+  background:linear-gradient(140deg,var(--green),#7fb98c);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:700;
+  flex:0 0 auto;
+}
+.brand b{font-size:19px;letter-spacing:.01em;display:block;line-height:1.3;}
+.brand small{color:var(--ink-soft);font-size:12.5px;}
+nav.main-nav ul{
+  list-style:none;
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+nav.main-nav a{
+  display:block;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:15px;
+  color:var(--ink-soft);
+  transition:.2s;
+}
+nav.main-nav a:hover{
+  background:var(--green-soft);
+  color:var(--green-dark);
+  text-decoration:none;
+}
+
+/* 首屏 */
+.hero{
+  background:linear-gradient(180deg,#eef7f0 0%,#f7faf7 100%);
+  border-bottom:1px solid var(--line);
+  padding:52px 0 44px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:44px;
+  align-items:center;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.35;
+  letter-spacing:.01em;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--green-dark);
+  border-bottom:3px solid #b9dcbf;
+}
+.hero p.lead{
+  font-size:16.5px;
+  color:var(--ink-soft);
+  margin-bottom:22px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  padding:11px 22px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:.2s;
+}
+.btn-primary{background:var(--green);color:#fff;}
+.btn-primary:hover{background:var(--green-dark);text-decoration:none;}
+.btn-ghost{background:#fff;color:var(--green-dark);border-color:#bcd9c2;}
+.btn-ghost:hover{background:var(--green-soft);text-decoration:none;}
+
+.ipa-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:26px 24px;
+}
+.ipa-card h2{
+  font-size:15px;
+  color:var(--ink-soft);
+  font-weight:600;
+  letter-spacing:.06em;
+  margin-bottom:14px;
+}
+.ipa-row{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  padding:12px 0;
+  border-bottom:1px dashed var(--line);
+}
+.ipa-row:last-child{border-bottom:none;}
+.ipa-row .label{
+  font-size:13px;
+  color:#fff;
+  background:var(--green);
+  border-radius:6px;
+  padding:2px 9px;
+  flex:0 0 auto;
+}
+.ipa-row .label.us{background:var(--amber);}
+.ipa-row .value{
+  font-family:"Times New Roman",Georgia,serif;
+  font-size:25px;
+  letter-spacing:.02em;
+  color:var(--ink);
+}
+.ipa-row .note{font-size:13px;color:var(--ink-soft);margin-left:auto;}
+
+/* 通用区块 */
+section.block{padding:52px 0;}
+section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{margin-bottom:28px;}
+.sec-head h2{
+  font-size:24px;
+  letter-spacing:.01em;
+  margin-bottom:8px;
+}
+.sec-head h2::before{
+  content:"";
+  display:inline-block;
+  width:6px;height:20px;
+  background:var(--green);
+  border-radius:3px;
+  margin-right:10px;
+  vertical-align:-2px;
+}
+.sec-head p{color:var(--ink-soft);font-size:15px;}
+
+/* 发音要点 */
+.points{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.point{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  box-shadow:var(--shadow);
+}
+.point .num{
+  display:inline-flex;
+  width:30px;height:30px;
+  border-radius:50%;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  font-weight:700;
+  align-items:center;justify-content:center;
+  font-size:15px;
+  margin-bottom:12px;
+}
+.point h3{font-size:17px;margin-bottom:8px;}
+.point p{font-size:14.5px;color:var(--ink-soft);}
+
+/* 对照表 */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:620px;
+  font-size:15px;
+}
+th,td{
+  padding:14px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+th{
+  background:var(--green-soft);
+  color:var(--green-dark);
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#fbfdfb;}
+td .ipa{
+  font-family:"Times New Roman",Georgia,serif;
+  font-size:17px;
+  color:var(--green-dark);
+}
+
+/* 同音词 */
+.homophones{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.homo{
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:4px solid var(--green);
+  border-radius:10px;
+  padding:18px 20px;
+}
+.homo h3{font-size:17px;margin-bottom:6px;}
+.homo h3 span{
+  font-family:"Times New Roman",Georgia,serif;
+  font-size:15px;
+  color:var(--green-dark);
+  font-weight:400;
+  margin-left:8px;
+}
+.homo p{font-size:14.5px;color:var(--ink-soft);}
+
+/* 用法列表 */
+.usage-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px 28px;
+}
+.usage-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px 18px;
+}
+.usage-item .en{
+  font-size:15.5px;
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  margin-bottom:6px;
+}
+.usage-item .cn{font-size:14px;color:var(--ink-soft);}
+
+/* 侧栏 + 主内容 */
+.split{
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:36px;
+  align-items:start;
+}
+.side-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow);
+}
+.side-card h3{
+  font-size:16px;
+  margin-bottom:12px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.side-card ul{list-style:none;}
+.side-card li{
+  padding:9px 0;
+  border-bottom:1px dashed var(--line);
+  font-size:14.5px;
+  color:var(--ink-soft);
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+.side-card li:last-child{border-bottom:none;}
+.side-card li b{color:var(--ink);font-weight:600;}
+.side-tip{
+  background:var(--green-soft);
+  border:1px solid #c9e3cf;
+  border-radius:var(--radius);
+  padding:18px 20px;
+  font-size:14.5px;
+  color:var(--green-dark);
+}
+.side-tip strong{display:block;margin-bottom:6px;}
+
+/* 拼读提示 */
+.spell-note{
+  background:#fffbf2;
+  border:1px solid #f0dcb4;
+  border-left:4px solid var(--amber);
+  border-radius:10px;
+  padding:18px 20px;
+  font-size:14.5px;
+  color:#6b5220;
+  margin-top:20px;
+}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto;}
+.faq details{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;
+  padding:16px 20px;
+  font-size:16px;
+  font-weight:600;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";
+  font-size:20px;
+  color:var(--green);
+  font-weight:400;
+  flex:0 0 auto;
+}
+.faq details[open] summary::after{content:"–";}
+.faq details[open] summary{background:var(--green-soft);}
+.faq .ans{
+  padding:14px 20px 18px;
+  font-size:14.8px;
+  color:var(--ink-soft);
+  border-top:1px solid var(--line);
+}
+.faq .ans p+p{margin-top:10px;}
+
+/* 页脚 */
+footer.site-foot{
+  background:#22331f;
+  color:#c3d6c6;
+  padding:44px 0 26px;
+  font-size:14px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:32px;
+  padding-bottom:26px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.foot-grid h4{
+  color:#fff;
+  font-size:15px;
+  margin-bottom:12px;
+  font-weight:600;
+}
+.foot-grid p{color:#a9bfad;font-size:13.5px;}
+.foot-grid ul{list-style:none;}
+.foot-grid li{margin-bottom:8px;}
+.foot-grid a{color:#c3d6c6;font-size:13.5px;}
+.foot-grid a:hover{color:#fff;}
+.foot-bottom{
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:#93a996;
+}
+
+/* 响应式 */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .points{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .hero{padding:36px 0 30px;}
+  .hero h1{font-size:26px;}
+  .points{grid-template-columns:1fr;}
+  .homophones{grid-template-columns:1fr;}
+  .usage-list{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  section.block{padding:38px 0;}
+  .head-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+  nav.main-nav ul{gap:2px;}
+  nav.main-nav a{padding:6px 11px;font-size:14px;}
+  .ipa-row{flex-wrap:wrap;}
+  .ipa-row .note{margin-left:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tagline">英语发音速查 · 音标写法与朗读要点</span>
+    <span>英式 / 美式双标注</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="brand">
+      <div class="logo">p</div>
+      <div>
+        <b>pear 音标速查</b>
+        <small>单词发音 · 音标写法 · 拼读规则</small>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#ipa">音标写法</a></li>
+        <li><a href="#points">发音要点</a></li>
+        <li><a href="#compare">对照表</a></li>
+        <li><a href="#homophone">同音词</a></li>
+        <li><a href="#usage">用法短语</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>pear 的音标：英式与美式写法一次看懂</h1>
+        <p class="lead">
+          pear 是英语中表示“梨”的常用名词。它的音标并不复杂，但英式与美式在写法上差别明显：
+          英式通常写作 /peə(r)/，美式通常写作 /per/。掌握这两个写法，再配合口型与重音要点，
+          就能把这个单词读准、写对。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#ipa">查看音标写法</a>
+          <a class="btn btn-ghost" href="#faq">跳到常见问题</a>
+        </div>
+      </div>
+
+      <aside class="ipa-card" id="ipa">
+        <h2>PEAR 音标速览</h2>
+        <div class="ipa-row">
+          <span class="label">英式</span>
+          <span class="value">/peə(r)/</span>
+          <span class="note">含集中双元音</span>
+        </div>
+        <div class="ipa-row">
+          <span class="label us">美式</span>
+          <span class="value">/per/</span>
+          <span class="note">带卷舌 r 音</span>
+        </div>
+        <div class="ipa-row">
+          <span class="label">重音</span>
+          <span class="value">单音节</span>
+          <span class="note">整词重读</span>
+        </div>
+        <div class="ipa-row">
+          <span class="label">词性</span>
+          <span class="value">n.</span>
+          <span class="note">可数名词</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 发音要点 -->
+  <section class="block" id="points">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>pear 的发音要点</h2>
+        <p>音标只是符号，真正读准还要看口型、舌位和重音位置。以下三点是最容易被忽略的地方。</p>
+      </div>
+      <div class="points">
+        <article class="point">
+          <span class="num">1</span>
+          <h3>先发 /p/，再滑向元音</h3>
+          <p>
+            pear 以清辅音 /p/ 开头，双唇闭合后迅速放开，送气要轻而短。
+            注意不要读成汉语拼音的“pēi”，英语的 /p/ 送气更明显，且不能拖长。
+          </p>
+        </article>
+        <article class="point">
+          <span class="num">2</span>
+          <h3>英式元音是 /eə/</h3>
+          <p>
+            英式 /peə(r)/ 中的 /eə/ 是一个集中双元音，从 /e/ 的位置向 /ə/ 滑动，
+            口型由半开逐渐放松。整词只有一个音节，不需要切分成两段来读。
+          </p>
+        </article>
+        <article class="point">
+          <span class="num">3</span>
+          <h3>美式元音是 /er/</h3>
+          <p>
+            美式 /per/ 中的 /e/ 后面直接接卷舌的 /r/，舌尖略上翘但不接触上颚。
+            在美式发音里，词尾的 r 是要读出来的，不能省略。
+          </p>
+        </article>
+      </div>
+
+      <div class="spell-note">
+        <strong>拼读提示：</strong>
+        pear 属于“ear 组合读 /eə/ 或 /er/”的一类词，和 bear、wear、tear（撕破）等词的元音规律相近，
+        但和 hear、near、dear 的元音不同。记忆时可以按“同韵词族”成组背诵，比单独死记音标更有效。
+      </div>
+    </div>
+  </section>
+
+  <!-- 对照表 -->
+  <section class="block alt" id="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>音标写法对照与相关形式</h2>
+        <p>不同词典的标注体系略有差异，下面把常见写法和相关词形集中列出，方便查阅。</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>词形 / 项目</th>
+              <th>英式音标</th>
+              <th>美式音标</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pear（单数）</td>
+              <td><span class="ipa">/peə(r)/</span></td>
+              <td><span class="ipa">/per/</span></td>
+              <td>最常查的写法，括号中的 r 表示英式可读可不读</td>
+            </tr>
+            <tr>
+              <td>pears（复数）</td>
+              <td><span class="ipa">/peəz/</span></td>
+              <td><span class="ipa">/perz/</span></td>
+              <td>词尾 -s 因前面是浊音而读 /z/</td>
+            </tr>
+            <tr>
+              <td>pear 的旧式标注</td>
+              <td><span class="ipa">/pɛə/</span></td>
+              <td><span class="ipa">/pɛr/</span></td>
+              <td>部分老词典用 /ɛə/ 表示同一元音，读音相同</td>
+            </tr>
+            <tr>
+              <td>pear tree（梨树）</td>
+              <td><span class="ipa">/ˈpeə triː/</span></td>
+              <td><span class="ipa">/ˈper triː/</span></td>
+              <td>重音落在 pear 上，tree 次重读</td>
+            </tr>
+            <tr>
+              <td>pear-shaped（梨形的）</td>
+              <td><span class="ipa">/ˈpeə ʃeɪpt/</span></td>
+              <td><span class="ipa">/ˈper ʃeɪpt/</span></td>
+              <td>复合形容词，重音在第一个成分</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 同音词 + 主内容 -->
+  <section class="block" id="homophone">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>同音词辨析：pear、pair、pare</h2>
+        <p>这三个词音标完全相同，是英语听力与拼写测试中的高频考点，区别只在词义和拼写。</p>
+      </div>
+      <div class="homophones">
+        <article class="homo">
+          <h3>pear <span>/peə(r)/ · /per/</span></h3>
+          <p>名词，指“梨”或“梨树”。属于水果类基础词汇，日常会话和阅读中都很常见，如 a ripe pear（一个熟梨）。</p>
+        </article>
+        <article class="homo">
+          <h3>pair <span>/peə(r)/ · /per/</span></h3>
+          <p>名词指“一双、一对”，也可作动词表示“配对、使成对”。如 a pair of shoes（一双鞋）、pair up（两两配对）。</p>
+        </article>
+        <article class="homo">
+          <h3>pare <span>/peə(r)/ · /per/</span></h3>
+          <p>动词，意为“削皮、修剪、削减”。如 pare the apple（削苹果皮）、pare down costs（削减开支）。</p>
+        </article>
+        <article class="homo">
+          <h3>记忆方法</h3>
+          <p>pear 与水果相关，可联想“梨”的形状；pair 含 ai，常与“成双成对”搭配；pare 是动词，多以 -e 结尾表示动作。按词性分类记忆更牢。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用法 + 侧栏 -->
+  <section class="block alt" id="usage">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head">
+          <h2>pear 的常见搭配与例句</h2>
+          <p>掌握音标之后，把这些搭配读出来，能同时巩固发音和用法。</p>
+        </div>
+        <div class="usage-list">
+          <div class="usage-item">
+            <div class="en">a pear tree</div>
+            <div class="cn">一棵梨树。tree 中的 /tr/ 连读要自然，不要读成两个独立音。</div>
+          </div>
+          <div class="usage-item">
+            <div class="en">peel a pear</div>
+            <div class="cn">给梨削皮。peel 与 pear 元音不同，注意区分 /iː/ 和 /eə/。</div>
+          </div>
+          <div class="usage-item">
+            <div class="en">a juicy pear</div>
+            <div class="cn">多汁的梨。juicy 重音在首音节，读时不要平均用力。</div>
+          </div>
+          <div class="usage-item">
+            <div class="en">pear juice</div>
+            <div class="cn">梨汁。两个词连读时，pear 词尾的 r 在英式中通常不发音。</div>
+          </div>
+          <div class="usage-item">
+            <div class="en">go pear-shaped</div>
+            <div class="cn">英式口语，意为“出岔子、搞砸了”，属于固定表达。</div>
+          </div>
+          <div class="usage-item">
+            <div class="en">not my pear</div>
+            <div class="cn">非标准表达，仅作对比示例，实际英语中不这样使用。</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>快速记忆卡</h3>
+          <ul>
+            <li><span>英式</span><b>/peə(r)/</b></li>
+            <li><span>美式</span><b>/per/</b></li>
+            <li><span>音节数</span><b>1</b></li>
+            <li><span>首音</span><b>/p/</b></li>
+            <li><span>同音词</span><b>pair / pare</b></li>
+            <li><span>复数</span><b>pears /peəz/</b></li>
+          </ul>
+        </div>
+        <div class="side-tip">
+          <strong>练习建议</strong>
+          把 pear、pair、pare 三个词连续朗读五遍，再放进句子中练习。同音词放在一起对比，能更快建立音形对应关系。
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>关于 pear 音标的常见问题</h2>
+        <p>下面整理了查音标时最常遇到的疑问，按需展开查看。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>pear 的音标到底该怎么写？</summary>
+          <div class="ans">
+            <p>最常见的写法有两种：英式 /peə(r)/，美式 /per/。括号中的 r 表示在英式发音中，词尾的 r 只有在后接元音时才明显读出，单独念这个词时通常不卷舌。</p>
+            <p>部分较老的词典会把英式标为 /pɛə/，这只是符号体系不同，实际读音一致。</p>
+          </div>
+        </details>
+        <details>
+          <summary>pear 和 pair 的发音一样吗？</summary>
+          <div class="ans">
+            <p>完全一样。pear、pair、pare 三个词的音标在英式和美式中都相同，属于典型的同音异形词。判断含义只能依靠上下文和拼写。</p>
+          </div>
+        </details>
+        <details>
+          <summary>英式发音里的 /eə/ 怎么读？</summary>
+          <div class="ans">
+            <p>/eə/ 是一个集中双元音，起点接近 /e/，口型半开、舌位靠前，然后自然向中元音 /ə/ 滑动，口型逐渐放松。整个滑动过程要连贯，不能读成两个分开的音。</p>
+          </div>
+        </details>
+        <details>
+          <summary>美式 /per/ 中的 r 一定要卷舌吗？</summary>
+          <div class="ans">
+            <p>美式发音中词尾的 r 通常要读出来，表现为舌尖略上翘的卷舌动作，但不接触上颚。如果完全不读 r，听感上会更接近英式，也可能造成理解偏差。</p>
+          </div>
+        </details>
+        <details>
+          <summary>pear 的复数怎么读？</summary>
+          <div class="ans">
+            <p>复数 pears 在英式中读 /peəz/，美式中读 /perz/。因为原词结尾是浊元音，所以 -s 发 /z/ 而不是 /s/。</p>
+          </div>
+        </details>
+        <details>
+          <summary>为什么我读的 pear 听起来像“培尔”？</summary>
+          <div class="ans">
+            <p>这通常是因为把英语的 /eə/ 直接替换成了汉语拼音的复韵母。汉语的“ai”类韵母开口更大、滑动更快，而英语 /eə/ 的终点更接近中元音。建议放慢速度，先单独练 /e/，再练向 /ə/ 的滑动。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>pear 音标速查</h4>
+        <p>一个专注于英语单词音标写法与发音要点的查询页面，内容以通用词典标注为基础，供学习和教学参考。</p>
+      </div>
+      <div>
+        <h4>本页导航</h4>
+        <ul>
+          <li><a href="#ipa">音标写法</a></li>
+          <li><a href="#points">发音要点</a></li>
+          <li><a href="#compare">对照表</a></li>
+          <li><a href="#homophone">同音词</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关查询</h4>
+        <ul>
+          <li><a href="#usage">pear 的用法短语</a></li>
+          <li><a href="#faq">常见问题解答</a></li>
+          <li><a href="#ipa">英式与美式对照</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>内容仅供语言学习参考，音标标注以主流词典通用体系为准。</span>
+      <span>pear 音标速查</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动补充处理，兼容不支持 scroll-behavior 的浏览器
+  document.querySelectorAll('nav.main-nav a[href^="#"], .hero-actions a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+</script>
+
+</body>
+      </html>
